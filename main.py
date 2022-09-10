@@ -4,10 +4,12 @@ import random
 from dotenv import load_dotenv
 import requests
 import json
+from discord.ext import commands
 
 load_dotenv()
 
-client = discord.Bot()
+# client = commands.Bot( command_prefix="$" intents=)
+client = discord.Client()
 token = os.getenv('DISCORD_TOKEN')
 
 # setting list of sad words
@@ -39,6 +41,9 @@ async def on_message(message):
     # if hello in message, reply with hi
     if 'hello' in user_message:
         await message.channel.send('hi')
+
+    if message.content.startswith("$hello"):
+        print('weeee')
     
     # list of sad words pre-created above
     # if any of the sad words are in the message, the bot will send a random inspirational quote    

@@ -12,7 +12,9 @@ Technologies Used: Python, (Libraries used: discord, python-dotenv, requests)
 ### Running the Project
 Run the following commands in terminal/command prompt
 ```
-pip install discord discord.py dotenv
+pip install discord==2.0.0
+pip install python-dotenv==0.20.0
+pip install requests==2.28.1
 OR
 pip install -r requirements.txt
 ```
@@ -26,3 +28,8 @@ DISCORD_GUILD= ''
 - Python 
 - A new server if you want to test the bot separately 
 
+### Starting a virtual environment
+```
+python -m venv .venv
+# change your python interpreter
+```

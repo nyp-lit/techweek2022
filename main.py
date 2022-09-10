@@ -8,8 +8,8 @@ from discord.ext import commands
 
 load_dotenv()
 
-# client = commands.Bot( command_prefix="$" intents=)
 client = discord.Client()
+# might need to add the parameter: intents=discord.intents.all()
 token = os.getenv('DISCORD_TOKEN')
 
 # setting list of sad words
@@ -52,6 +52,3 @@ async def on_message(message):
     
     # if 'happy' in user_message or 'good' in user_message or 'excited' in user_message:
     #     await message.channel.send(random.choice(insults))
-   
-# activating the bot
-client.run(token)

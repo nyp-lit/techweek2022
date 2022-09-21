@@ -17,6 +17,7 @@ sad_words = ["sad", "depressed", "unhappy", "angry", "miserable"]
 # for API
 # The get_quote() function uses the requests module to request data from the API URL. The API returns a random inspirational quote.
 # json.loads() to convert the response from the API to JSON. 
+
 def get_quote():
     response = requests.get("https://zenquotes.io/api/random")
     json_data = json.loads(response.text)
@@ -40,8 +41,9 @@ async def on_message(message):
     if 'hello' in user_message:
         await message.channel.send('hi')
 
-    # if message.content.startswith("$hello"):
-    #     print('weeee')
+    # if message startswith hello, reply with hello 
+    if user_message.startswith("hello"):
+         await message.channel.send('hello')
 
     # list of sad words pre-created above
     # if any of the sad words are in the message, the bot will send a random inspirational quote

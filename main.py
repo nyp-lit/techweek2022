@@ -3,7 +3,7 @@ import random
 from dotenv import load_dotenv
 import requests
 import json
-from discord.ext import commands
+import discord
 
 load_dotenv()
 
@@ -19,10 +19,10 @@ sad_words = ["sad", "depressed", "unhappy", "angry", "miserable"]
 # The get_quote() function uses the requests module to request data from the API URL. The API returns a random inspirational quote.
 # json.loads() to convert the response from the API to JSON. 
 def get_quote():
-    response = requests.get("https://zenquotes.io/api/random%22)
+    response = requests.get("https://zenquotes.io/api/random")
     json_data = json.loads(response.text)
     quote = json_data[0]['q'] + " -" + json_data[0]['a']
-    return(quote)
+    return quote
 
 @client.event
 async def on_ready():

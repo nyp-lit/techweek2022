@@ -5,7 +5,7 @@ Discord Bot built with Python
 - a list of sad words will be preset, to trigger the bot.
 - when a sad message from the list is sent, it will randomly generate a quote from the passed api and the bot will send the quote into the server. 
 
-Date: Auguest 2022 <br/>
+Date: August 2022 <br/>
 Technologies Used: Python <br/>
 Libraries used: discord, python-dotenv, requests
 
